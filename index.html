@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Handlebars</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div class="container">
+		<div class="conteiner__title-bar">
+			<div class="conteiner__title">
+				My Contact List
+			</div>
+			<div class="conteiner__filter">
+				<input type="search" placeholder="find friend">
+				<a href="#" class="clear" title="clear">
+			      <span></span><span></span>
+			    </a>
+			</div>
+		</div>
+		<div class="container__data-table">
+			<table id="grid">
+			    <thead>
+			      <tr>
+			        <th data-type="number">First Name</th>
+			        <th data-type="string">Last Name</th>
+			        <th></th>
+			      </tr>
+			    </thead>
+			    <tbody id="my-friends">
+			    	<script id="friendsTamplate" type="text/x-handlebars-template">
+				    	{{#each friends}}
+				    		<tr>
+								<td>{{firstName}}</td>
+								<td>{{lastName}}</td>
+								<td>
+									<button class="del-friend" data-id="{{id}}">Del</button>
+								</td>	
+							</tr>
+						{{/each}}
+					</script>
+			    </tbody>
+			</table>
+		</div>
+	</div>
+	
+	<button class="add-friend">ADD FRIEND</button>
+
+	<script src="handlebars-v4.0.10.js"></script>
+	<script src="script.js"></script>
+	
+</body>
+</html>

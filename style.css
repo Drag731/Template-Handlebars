@@ -1,0 +1,94 @@
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #DDD;
+}
+
+.container {
+  width: 60%;
+  margin: 50px auto;
+}
+
+.conteiner__title-bar {
+  border: 3px solid black;
+  padding: 20px;
+  margin-bottom: 20px;
+   position: relative;
+}
+
+.conteiner__title-bar:after {
+  content: "\0020";
+  display: block;
+  clear: both;
+
+}
+
+.conteiner__title {
+  float: left;
+}
+
+.conteiner__filter {
+  float: right;
+}
+
+#grid {
+  border: 3px solid black;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border-right: 3px solid black;
+  width: 50%;
+  padding: 5px 10px;
+}
+
+th {
+  background: #aaa;
+  padding: 0 10px;
+  text-align: left;
+}
+
+tr:nth-child(odd) {
+  background: #ccc;
+}
+
+tr:nth-child(even) {
+  background: #eee;
+}
+
+.clear { 
+    position: absolute; 
+    top: 45%;
+    right: 25px; 
+    width: 16px; 
+    height: 12px; 
+}
+
+.clear span { 
+    display: block; 
+    width: 18px; 
+    height: 5px; 
+    background: #333; 
+}
+
+.clear span:first-child {
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.clear span:last-child {
+    margin: -5px 0 0;
+    -ms-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.add-friend {
+    display: block;
+    margin: 0 auto;
+}
